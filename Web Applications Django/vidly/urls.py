@@ -14,8 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('movies/', include('movies.urls'))
 ]
+
+# Whenever we send a request that starts with movies Django will now automatically route to the movies directory. Which is the reason we have an empty string overthere
