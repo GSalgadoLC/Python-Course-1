@@ -1,3 +1,12 @@
+# Notes:
+# A Django application can have many applications within it, like reusable subunits like Legos
+# Model View Controller Architecture
+# Model Template View in Django
+# admin . terminal. python manage.py createsuperuser
+# admin moderator guests
+# A database abstraction API allows you to bypass the complexities of the database
+
+
 #!/usr/bin/env python
 import os
 import sys

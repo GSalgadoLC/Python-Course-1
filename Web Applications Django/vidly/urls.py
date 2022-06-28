@@ -16,9 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from api.models import MovieResource
+from . import views
+
+movie_resource = MovieResource()
+
+
 urlpatterns = [
+    path('', views.home),
     path('admin/', admin.site.urls),
-    path('movies/', include('movies.urls'))
+    path('movies/', include('movies.urls')),
+    path('api/', include(movie_resource.urls))
 ]
 
 # Whenever we send a request that starts with movies Django will now automatically route to the movies directory. Which is the reason we have an empty string overthere
